@@ -1,0 +1,102 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>Admin Login</title>
+    <meta charset = "utf-8">
+	<meta name = "viewport" content = "width=device-width, minimum-scale=1, maximum-scale=1">
+	<link href="css/jquery.mobile-1.4.3.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/jqm-demos.css">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+	<link rel="stylesheet" href="jquery.mobile.datepicker.css" />
+	
+	<!-- Theme Roler B-->
+	<link rel="stylesheet" href="css/B.min.css" />
+	<link rel="stylesheet" href="css/jquery.mobile.icons.min.css" />
+	<!-- THeme Roler -->
+	
+	<!-- Theme Roler C-->
+	<link rel="stylesheet" href="css/C.min.css" />
+	<!-- THeme Roler -->
+	
+	
+	<script src="js/jquery.js"></script>
+    <script src="js/jquery.mobile-1.4.3.min.js"></script>
+
+<script>
+
+function submitLoginForm(){
+var uname=$("#uname").val();
+var password=$("#password").val();
+
+if(uname=='admin'&&password=='admin123')
+{	 
+window.location.href="admin_home.html";
+
+}
+else
+{
+alert("Wrong Credentials::");
+window.location.reload()
+}
+
+}
+</script>
+</head>
+
+<body>
+
+	<div data-theme="a" data-role="page" class="jqm-demos" id="panel-fixed-page1" data-title="AdminLogin">
+
+	    <!--                HEADER                   -->
+	    
+	    <div data-role="header" data-position="fixed" data-theme="b">
+	        <h1>Admin Master</h1>
+	    </div><!-- /header -->
+	
+	   
+	   <div data-role="header" class="ui-bar ui-bar-a  ui-nodisc-icon ui-alt-icon" data-theme="c">
+		   <h2>Admin Login</h2>
+	   </div>
+		
+		    
+	
+		  <!--                 CONTENT               -->
+	   
+	    <div role="main" class="ui-content jqm-content jqm-fullwidth">
+	      <form action="" method="">
+	         
+      	   <div class="ui-grid-solo">
+               <div class="ui-field-contain">
+				   <label for="textinput-1">User Name </label>
+				   <input name="uname" id="uname" placeholder="Enter User Name" value="" type="text">
+               </div>
+           </div> 
+           <div class="ui-grid-solo">
+               <div class="ui-field-contain">
+				   <label for="password">Password </label>
+				   <input name="password" id="password" placeholder="Enter Password" value="" type="password">
+               </div>
+           </div> 
+           
+      	   
+      	   <div data-theme="b">
+				<button class="ui-btn ui-btn-inline ui-btn-c" onclick="submitLoginForm()" >Submit</button>
+				<button class="ui-btn ui-btn-inline ui-btn-c">Reset</button>
+			</div>
+      	    
+      	  </form>
+	
+	</div>
+	
+	<div data-role="footer" data-theme="b">
+			<h4>Page Footer</h4>
+	</div><!-- /footer -->
+	
+</div>
+</body>
+</html>
+
+
+
+
+				
